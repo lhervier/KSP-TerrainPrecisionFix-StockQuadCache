@@ -4,7 +4,19 @@ Places KSP terrain vertices with **stock's own arithmetic**, reading the two `Tr
 **once per quad** instead of once per vertex. The terrain it builds is the terrain stock builds, vertex
 for vertex and bit for bit. Only what it costs changes.
 
-**This is a measuring aid, not a mod to play with.** It fixes nothing and is not meant to be published.
+> **Do not install this to play.** It is a measuring instrument. It fixes nothing, and what it saves is
+> **0.11 ms per second of flight** 5 km over the Mun — 0.011 % of real time, which is less than two runs
+> of KSP differ from each other. It is published so that a figure quoted elsewhere can be checked, not
+> because it is worth having.
+
+## Why it is published at all
+
+A measurement is only worth the code that produced it. This mod is the middle term of a three-way
+comparison whose two other terms are published — [what stock
+costs](https://github.com/lhervier/KSP-TerrainPrecisionFix-PQSBench/blob/main/perfs/README.md) and
+[what Terrain Precision Fix
+costs](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/perfs/README.md) — and a term that
+nobody can run is a number nobody can check. That is the whole reason it is here.
 
 ## Why it exists
 
@@ -34,8 +46,10 @@ the middle term of a three-way comparison:
 | Terrain Precision Fix | its arithmetic, frames worked out once per quad |
 
 Measured with [PQS Bench](https://github.com/lhervier/KSP-TerrainPrecisionFix-PQSBench), whose
-`calibrate` mode times whatever is installed against a copy of the stock formula, in the same frame and
-on the same quad.
+`calibrate` mode times whatever is installed against the stock formula itself, in the same frame and on
+the same quad. **The measurement is in [`perfs/`](perfs/)**: reading the two `Transform`s once per quad
+instead of once per vertex is worth 78.6 ns of the 285.2 ns a stock vertex costs — real, repeatable, and
+impossible to feel while playing.
 
 ## Scope
 
