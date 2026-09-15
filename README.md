@@ -5,7 +5,7 @@ Places KSP terrain vertices with **stock's own arithmetic**, reading the two `Tr
 for vertex and bit for bit. Only what it costs changes.
 
 > **Do not install this to play.** It is a measuring instrument. It fixes nothing, and what it saves is
-> **0.11 ms per second of flight** 5 km over the Mun — 0.011 % of real time, which is less than two runs
+> **0.16 ms per second of flight** 5 km over the Mun — 0.016 % of real time, which is less than two runs
 > of KSP differ from each other. It is published so that a figure quoted elsewhere can be checked, not
 > because it is worth having.
 
@@ -47,9 +47,9 @@ the middle term of a three-way comparison:
 
 Measured with [PQS Bench](https://github.com/lhervier/KSP-TerrainPrecisionFix-PQSBench), whose
 `calibrate` mode times whatever is installed against the stock formula itself, in the same frame and on
-the same quad. **The measurement is in [`perfs/`](perfs/)**: reading the two `Transform`s once per quad
-instead of once per vertex is worth 78.6 ns of the 285.2 ns a stock vertex costs — real, repeatable, and
-impossible to feel while playing.
+the same quad. **The measurement is in [`perfs/`](perfs/)**, taken on my laptop: reading the two
+`Transform`s once per quad instead of once per vertex is worth 82.8 ns of the 232.3 ns a stock vertex
+costs in the same run — real, repeatable, and impossible to feel while playing.
 
 ## Scope
 
