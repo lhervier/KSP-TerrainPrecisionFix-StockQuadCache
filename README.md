@@ -1,5 +1,7 @@
 # Stock Quad Cache
 
+**⚠️ Work in progress.** This is an active investigation, not a finished mod. The figures, the code and the conclusions on this page can still change, and several questions are still open.
+
 **How this was made.** Written with Claude, Anthropic's AI assistant, and reviewed line by line by a
 human — me. I am saying so before anything else, because contributions made with an AI deserve a closer
 look than others, and because some people would rather stop reading here. What there is to look at is
