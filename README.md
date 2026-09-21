@@ -54,8 +54,18 @@ procedure**; the two runs read here, with their logs, are in [`perfs/`](perfs/).
 placing a vertex**, some 42 ns per read, and the Harmony wrapper the mod pays for its own patch is
 inside that figure.
 
+Each figure is the difference within its own run, never an `installed` column set against another
+run's: from one session of KSP to the next the whole replay runs a little faster or slower, and only a
+difference taken inside one session cancels that out. The two runs land 5.7 ns apart; with nothing
+installed, [PQS Bench](https://github.com/lhervier/KSP-PQSBench#what-stock-costs) reports about 3 ns
+either way between two ways of running the same code.
+
+The instrument does not check that the terrain is still stock's, bit for bit: where a vertex lands is
+not a question about performance. That holds by construction only, and the day this mod's arithmetic is
+touched, it stops standing for what it is supposed to, and its figure is worth nothing.
+
 Timed frame by frame over the same flight, it cannot be told apart from stock: those runs are kept
-[with Terrain Precision Fix](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/master/perfs/README.md#what-a-frame-pays),
+[with Terrain Precision Fix](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/master/docs/performance.md#what-a-frame-pays),
 together with the fix's and stock's.
 
 ## Why it exists
