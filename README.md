@@ -57,7 +57,7 @@ inside that figure.
 Each figure is the difference within its own run, never an `installed` column set against another
 run's: from one session of KSP to the next the whole replay runs a little faster or slower, and only a
 difference taken inside one session cancels that out. The two runs land 5.7 ns apart; with nothing
-installed, [PQS Bench](https://github.com/lhervier/KSP-PQSBench#what-stock-costs) reports about 3 ns
+installed, [PQS Bench](https://github.com/lhervier/KSP-PQSBench/blob/master/docs/what-stock-costs.md) reports about 3 ns
 either way between two ways of running the same code.
 
 The instrument does not check that the terrain is still stock's, bit for bit: where a vertex lands is
