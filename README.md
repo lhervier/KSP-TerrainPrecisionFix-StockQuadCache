@@ -57,7 +57,7 @@ inside that figure.
 Each figure is the difference within its own run, never an `installed` column set against another
 run's: from one session of KSP to the next the whole replay runs a little faster or slower, and only a
 difference taken inside one session cancels that out. The two runs land 5.7 ns apart; with nothing
-installed, [PQS Bench](https://github.com/lhervier/KSP-PQSBench/blob/master/docs/what-stock-costs.md) reports about 3 ns
+installed, [PQS Bench](https://github.com/lhervier/KSP-PQSBench/blob/main/docs/what-stock-costs.md) reports about 3 ns
 either way between two ways of running the same code.
 
 The instrument does not check that the terrain is still stock's, bit for bit: where a vertex lands is
@@ -65,7 +65,7 @@ not a question about performance. That holds by construction only, and the day t
 touched, it stops standing for what it is supposed to, and its figure is worth nothing.
 
 Timed frame by frame over the same flight, it cannot be told apart from stock: those runs are kept
-[with Terrain Precision Fix](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/master/docs/performance.md#what-a-frame-pays),
+[with Terrain Precision Fix](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/docs/performance.md#what-a-frame-pays),
 together with the fix's and stock's.
 
 ## Why it exists
@@ -74,7 +74,7 @@ together with the fix's and stock's.
 because the stock version loses precision: the ground it builds comes back at a slightly different
 height at every load. Its replacement is arithmetic of its own, in double precision, in a frame worked
 out for each quad — and it is not merely free, it is faster than stock: 2.7× per vertex, on
-[its page](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/master/perfs/README.md).
+[its page](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/perfs/README.md).
 
 That figure invites an obvious objection, and the objection is fair. The replacement changes **two**
 things at once: the arithmetic, and the fact that what does not depend on the vertex is worked out once
@@ -87,12 +87,12 @@ mod carries the second without the first, which makes the comparison a three-ter
 
 | installed | `differenceNsPerVertex`, runs 1 and 2 | measured in |
 |---|---|---|
-| nothing | −2.5 and +3.4, the floor of the method | [PQS Bench](https://github.com/lhervier/KSP-PQSBench/blob/master/perfs/README.md) |
+| nothing | −2.5 and +3.4, the floor of the method | [PQS Bench](https://github.com/lhervier/KSP-PQSBench/blob/main/perfs/README.md) |
 | **this mod** | **−81.7 and −87.4** | [`perfs/`](perfs/), here |
-| Terrain Precision Fix | −187.0 and −178.9 | [its own page](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/master/perfs/README.md) |
+| Terrain Precision Fix | −187.0 and −178.9 | [its own page](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/perfs/README.md) |
 
 The answer is not quite half and half: on average 84.6 ns for the two `Transform` reads, and
-rather more again, 98.4 ns, for the arithmetic — the split is [on the fix's page](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/master/docs/performance.md).
+rather more again, 98.4 ns, for the arithmetic — the split is [on the fix's page](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/docs/performance.md).
 Give stock this cache and a vertex still costs about 70 % of what stock costs in the same run, against
 about 37 % for the fix: nearly twice as much. The fix is not faster merely for being better organised,
 and that one sentence is what this mod exists to support.
@@ -103,7 +103,7 @@ one, and a term of a comparison that nobody can run is a number that nobody can 
 The step this page cannot put a number on is the one before: the fix works its frame out once per quad
 because doing it per vertex would cost several times the placement itself. That is reasoning about the
 code, not a measurement, and it belongs to [the fix's own
-page](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/master/perfs/README.md).
+page](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/perfs/README.md).
 
 ## Install
 

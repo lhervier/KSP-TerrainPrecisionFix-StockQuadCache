@@ -11,7 +11,7 @@ procedure** and whose own `perfs/` carries the stock runs these are read against
 KSP 1.12.5. `GameData` holding Harmony, ModuleManager, KSP Community Fixes 1.41.1, the measuring mod and
 this one. A command pod on rails in a circular orbit 5 km over the Mun, 70 seconds of game time from 30 s
 of mission time. The save, the machine and the order of the runs are the stock runs', all described on
-[their page](https://github.com/lhervier/KSP-PQSBench/blob/master/perfs/README.md) — figures from another
+[their page](https://github.com/lhervier/KSP-PQSBench/blob/main/perfs/README.md) — figures from another
 machine are not comparable to these.
 
 | log | starts at | game time | real time | quads of the highest level built |
@@ -31,4 +31,4 @@ BENCH calibration;quads=22;roundsPerQuad=8;verticesPerFormula=39600;stockNsPerVe
 
 This mod was also timed frame by frame, with the same save, against stock and against Terrain Precision
 Fix. Those runs are read together, so they are kept together:
-[with Terrain Precision Fix](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/master/perfs/README.md#what-a-frame-pays).
+[with Terrain Precision Fix](https://github.com/lhervier/KSP-TerrainPrecisionFix/blob/main/perfs/README.md#what-a-frame-pays).
